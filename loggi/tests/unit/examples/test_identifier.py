@@ -9,14 +9,6 @@ def test_valid_identifier_01():
     assert is_valid is True
 
 
-def test_valid_identifier_02():
-    identifier = Identifier()
-
-    is_valid = identifier.validate_identifier('')
-
-    assert is_valid is False
-
-
 def test_valid_identifier_03():
     identifier = Identifier()
 
@@ -85,5 +77,12 @@ def test_valid_identifier_11():
     identifier = Identifier()
 
     is_valid = identifier.validate_identifier('a b c')
+
+    assert is_valid is False
+
+def test_valid_identifier_12():
+    identifier = Identifier()
+
+    is_valid = identifier.validate_identifier('variável_da_Denise')
 
     assert is_valid is False

@@ -1,14 +1,6 @@
 from examples.identifier import Identifier
 
 
-def test_valid_identifier_01():
-    identifier = Identifier()
-
-    is_valid = identifier.validate_identifier('')
-
-    assert is_valid is False
-
-
 def test_valid_identifier_02():
     identifier = Identifier()
 

@@ -1,7 +1,9 @@
 class Identifier:
     def validate_identifier(self, identifier):
         valid_id = False
-        if identifier:
+        if not identifier:
+            raise ValueError('Tipo errado')
+        else:
             achar = identifier[0]
             valid_id = self.valid_s(achar)
         if len(identifier) > 1:
